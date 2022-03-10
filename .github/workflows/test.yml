@@ -15,6 +15,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -25,7 +27,9 @@ jobs:
       - name: Build AppImage
         run: ./make_libreoffice_appimage daily x86-64 N N Y N N
         
-      - uses: actions/upload-artifact@v2
+     
+      - uses: ncipollo/release-action@v1
         with:
-          name: LibreOffice, no bundled help
-          path: out/*.AppImage
+          artifacts: "out/*.AppImage"
+          tag: cat .version
+          token: ${{ secrets.GITHUB_TOKEN }}
