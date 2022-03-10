@@ -26,10 +26,13 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build AppImage
         run: ./make_libreoffice_appimage daily x86-64 N N Y N N
+      - name: Get version
+        id: ver
+        run: echo "::set-output name=version::$(cat .version)"
         
      
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "out/*.AppImage"
-          tag: cat .version
+          tag: ${{ steps.ver.outputs.version}}
           token: ${{ secrets.GITHUB_TOKEN }}
