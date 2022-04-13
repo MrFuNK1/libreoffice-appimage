@@ -33,6 +33,6 @@ jobs:
      
       - uses: ncipollo/release-action@v1
         with:
-          artifacts: "out/*.AppImage"
+          artifacts: "out/*"
           tag: ${{ steps.ver.outputs.version}}
           token: ${{ secrets.GITHUB_TOKEN }}
