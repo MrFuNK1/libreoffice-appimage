@@ -55,16 +55,20 @@ The possible parameters are:
 > After downloading the script it must be made executeable to work. 
 
 **Example 1:**  **`./make_libreoffice_appimage still x86-64 it N N N N`**
-             Build LO AppImage package with Italian language-pack, without offline help, not auto-updateable, without signing the package, not portable.
+
+Build LO AppImage package with Italian language-pack, without offline help, not auto-updateable, without signing the package, not portable.
 
 **Example 2:**  **`./make_libreoffice_appimage daily x86-64 de Y Y N Y`**
-             Build LO AppImage package (development version) with German language-pack, with (German) offline help, updateable via zsync, without signing the package, portable.
+
+Build LO AppImage package (development version) with German language-pack, with (German) offline help, updateable via zsync, without signing the package, portable.
 
 **Example 3:**  **`./make_libreoffice_appimage 3.5.7.2 x86-64 standard Y N N N`**
-             Build LO v3.5.7.2 AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, not portable.
+
+Build LO v3.5.7.2 AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, not portable.
 
 **Example 4:**  **`./make_libreoffice_appimage 25.8.0.1 x86-64 standard Y N N Y`**
-             Build LO v25.8.0.1 (RC1 of 25.8) AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, portable.
+
+Build LO v25.8.0.1 (RC1 of 25.8) AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, portable.
 
 ## FAQ
 
@@ -90,10 +94,10 @@ Do you trust the LibreOffice code you run, if it is installed from RPM or DEB pa
 
 * One thing you can do, while the AppImage runs:
   In a terminal, run
-
+  
       mount | grep \.mount_Lib
-
-  This will reveal the (temporary) mount point where the AppImage filesystem is (read-only) mounted while LibreOffice runs. You can move into that directory freely and look around and even copy files to someplace outside the AppImage. Then you can keep investigating them when the AppImage does not run any more, once you closed down LibreOffice....
+  
+  This will reveal the (temporary) mount point where the AppImage filesystem is (read-only) mounted while LibreOffice runs. You can move into that directory freely and look around and even copy files to someplace outside the AppImage. Then you can keep investigating them when the AppImage does not run any more, once you closed down LibreOffice....
 
 **Can I create different versions of LibreOffice AppImages and store them on the same system?**
 
