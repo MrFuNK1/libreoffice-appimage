@@ -507,7 +507,7 @@ chmod a+x AppRun
 
 cd ..
 
-URL="https://github.com/probonopd/AppImageKit/releases/download/continuous/appimagetool-${appimageArch}.AppImage"
+URL="https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-${appimageArch}.AppImage"
 wget -c "$URL" -O appimagetool
 chmod a+x ./appimagetool
 set +x
