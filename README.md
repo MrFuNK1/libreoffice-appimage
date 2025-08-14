@@ -1,8 +1,12 @@
 > [!NOTE]
 > Fork with minor corrections as needed to make or keep the script working.
 
-# `make_libreoffice_appimage`
-## (Re-package official LibreOffice .deb packages into the AppImage format)
+> [!NOTE]
+> The formatting and content of the original README.md were updated slightly but kept as close to the original source as possible. Any opinion herein are from the original author and not mine (MrFuNK1).
+
+# make_libreoffice_appimage
+
+## Re-package official LibreOffice .deb packages into the AppImage format
 
 This script creates an AppImage package for any version of LibreOffice.
 
@@ -48,11 +52,10 @@ The possible parameters are:
    - `'Y'`:  yes, use a specific profile folder;
    - `'N'`:  no, LibreOffice default configuration is maintained.
 
-
 ## Examples
 
 > [!NOTE]
-> After downloading the script it must be made executeable to work. 
+> After downloading the script it must be made executeable to work. You can do that via `chmod +x ./make_libreoffice_appimage`.
 
 **Example 1:**  **`./make_libreoffice_appimage still x86-64 it N N N N`**
 
@@ -62,11 +65,7 @@ Build LO AppImage package with Italian language-pack, without offline help, not 
 
 Build LO AppImage package (development version) with German language-pack, with (German) offline help, updateable via zsync, without signing the package, portable.
 
-**Example 3:**  **`./make_libreoffice_appimage 3.5.7.2 x86-64 standard Y N N N`**
-
-Build LO v3.5.7.2 AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, not portable.
-
-**Example 4:**  **`./make_libreoffice_appimage 25.8.0.1 x86-64 standard Y N N Y`**
+**Example 3:**  **`./make_libreoffice_appimage 25.8.0.1 x86-64 standard Y N N Y`**
 
 Build LO v25.8.0.1 (RC1 of 25.8) AppImage package with a set of selected language-packs, with offline help (for selected languages), not auto-updateable, without signing the package, portable.
 
